@@ -72,8 +72,6 @@ public class EmploeeDAOHibernateImpl implements EmployeeDAO {
 		theQuery.setParameter("employeeId", id);
 		
 		theQuery.executeUpdate();
-		
-		
 	}
 
 }
