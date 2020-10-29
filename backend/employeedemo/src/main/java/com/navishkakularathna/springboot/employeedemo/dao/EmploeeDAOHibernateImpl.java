@@ -41,4 +41,26 @@ public class EmploeeDAOHibernateImpl implements EmployeeDAO {
 		return employees;
 	}
 
+	@Override
+	public Employee findById(int id) {
+		//Get the current Hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		//Get the employee
+		Employee theEmployee = currentSession.get(Employee.class, id);
+		
+		//Return the employee
+		return theEmployee;
+	}
+
+	@Override
+	public void save(Employee theEmployee) {
+		
+	}
+
+	@Override
+	public void deleteById(int id) {
+		
+	}
+
 }
